@@ -7,6 +7,13 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
+        self.setupUI()
+        #############################################
+        #             To activate function with click
+        self.confirmButton.clicked.connect(self.saveUser)
+        #############################################
+
+    def setupUI(self):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Age = QtWidgets.QLabel(self.centralwidget)
@@ -60,14 +67,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-
-        #############################################
-        #             To activate function with click
-        self.confirmButton.clicked.connect(self.saveUser)
-        #############################################
-
-
-##### Function to get user information and save them on a database ########
+    ##### Function to get user information and save them on a database ########
     ####### if any textblank is empty then takes it as empty ########
 
     def saveUser(self):
