@@ -159,8 +159,62 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="admin_Selected">
+    <property name="title">
+     <string>Admin Page</string>
+    </property>
+    <addaction name="registerWin"/>
+    <addaction name="separator"/>
+    <addaction name="loginWin"/>
+    <addaction name="separator"/>
+    <addaction name="databaseWin"/>
+   </widget>
+   <widget class="QMenu" name="menuUser_Page">
+    <property name="title">
+     <string>User Page</string>
+    </property>
+    <addaction name="userloginWin"/>
+    <addaction name="separator"/>
+    <addaction name="userWin"/>
+   </widget>
+   <addaction name="admin_Selected"/>
+   <addaction name="menuUser_Page"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="registerWin">
+   <property name="text">
+    <string>Register</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="loginWin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="databaseWin">
+   <property name="text">
+    <string>Database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="userloginWin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </action>
+  <action name="userWin">
+   <property name="text">
+    <string>User Information</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

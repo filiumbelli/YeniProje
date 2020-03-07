@@ -84,7 +84,7 @@ class Ui_MainWindow(object):
         mydb = myClient["database"]
         mycol = mydb["employee"]
 
-        x=mycol.insert_one(d)
+        mycol.insert_one(d)
 
 ##################################################################################
 
@@ -111,4 +111,9 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
+    sys.exit(app.exec_())
+
+if login.exec_() == QtWidgets.QDialog.Accepted:
+    window = Window()
+    window.show()
     sys.exit(app.exec_())
